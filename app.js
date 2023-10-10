@@ -12,9 +12,7 @@ app.use('/api/user', router)
 app.use('/api/product', productRouter)
 
 mongoose
-  .connect(
-    'mongodb+srv://nicknionene7:1910Nick@cluster0.8hueods.mongodb.net/?retryWrites=true&w=majority'
-  )
+  .connect('urlmongo')
   .then(() => {
     app.listen(5000, () => {
       console.log('Server is listening on port 5000')
